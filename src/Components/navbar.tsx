@@ -1,7 +1,9 @@
 import { Button, Container, Nav, Navbar as NavbarBs } from "react-bootstrap"
-import { NavLink } from "react-router-dom"
+// import { NavLink } from "react-router-dom"
 
-export function Navbar() {
+type props={quantity:number}
+export function Navbar(props:props) {
+        const { quantity}=props;
     return (
     <NavbarBs sticky="top" className="bg-white shadow-sm mb-3">
             <Container>
@@ -31,7 +33,7 @@ export function Navbar() {
                         transform: "translate(25%, 25%)",
                     }}
                     >
-                        3
+                        {quantity}
                     </div>
                 </Button>
             </Container>
